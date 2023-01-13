@@ -15,7 +15,7 @@ const getTask = async(req,res) => {
 
 const createTask = async(req,res) => {
     const task = await Task.create(req.body)
-    res.send(201).json({task})
+    res.status(201).json({task})
 }
 const deleteTask = async(req,res) => {
     const {id : taskID} = req.params
